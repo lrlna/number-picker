@@ -4,6 +4,8 @@ const Numerals = () => {
   var self = {}
 
   // given a number, convert to proper lang
+  // input, number
+  // currentLang, string in form of 'fa', 'ar', 'en'
   self.convertNumbers = (input, currentLang) => {
     // leave number as is if NaN
     if (isNaN(input)) return input
