@@ -59,3 +59,5 @@ const Numbers = () => {
 
   return self
 }
+
+module.exports = Numbers

@@ -1,23 +1,19 @@
-var numbers = require('numbers')()
+var numbers = require('./numbers')()
 
 const Numerals = () => {
   var self = {}
 
   // given a number, convert to proper lang
   self.convertNumbers = (input, currentLang) => {
+    // leave number as is if NaN
     if (isNaN(input)) return input
 
     input = input.toString()
 		var numbersInInput = input.match(/[0-9+\.]/gm)
-
     var languageNumbers = numbers.getNumbers()[currentLang]
+    var convertedNumber = numbersInInput.map( (numerals) => languageNumbers[numerals] ).join('')
 
-    // need to map and return a different thing actually
-    numbersInInput.forEach(function(n) {
-      input = input.replace(n, languageNumbers[n])
-    })
-
-    return input
+    return convertedNumber
   }
 
   return self
