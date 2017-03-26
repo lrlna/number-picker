@@ -8,7 +8,7 @@ module.exports = function getNumber (input, lang) {
   if (isNaN(input)) return input
 
   input = input.toString()
-  var numInput = input.match(/[0-9+\.]/gm)
+  var numInput = input.match(/[0-9+.]/gm)
   var language = numbers(lang)
 
   return numInput.map(function (num) {

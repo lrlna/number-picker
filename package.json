@@ -1,10 +1,10 @@
 {
-  "name": "numerals",
+  "name": "number-picker",
   "version": "1.0.0",
   "description": "convert between hindu and arabic numeral systems",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "keywords": [
     "hindu",
