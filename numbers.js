@@ -1,16 +1,6 @@
-const Numbers = () => {
-  var self = {}
-
-  self.getNumbers = () => {
-    return {
-      en: getenNumbers(),
-      fa: getfaNumbers(),
-      ar: getarNumbers()
-    }
-  }
-
-  function getenNumbers () {
-    return {
+module.exports = function numbers (lang) {
+  var num = {
+    'en': {
       '1': '1',
       '2': '2',
       '3': '3',
@@ -22,42 +12,34 @@ const Numbers = () => {
       '9': '9',
       '0': '0',
       '.': '.'
+    },
+    'ar': {
+      '1': '۱',
+      '2': '۲',
+      '3': '۳',
+      '4': '٤',
+      '5': '٥',
+      '6': '٦',
+      '7': '۷',
+      '8': '۸',
+      '9': '۹',
+      '0': '۰',
+      '.': '/'
+    },
+    'fa': {
+      '1': '۱',
+      '2': '۲',
+      '3': '۳',
+      '4': '۴',
+      '5': '۵',
+      '6': '۶',
+      '7': '۷',
+      '8': '۸',
+      '9': '۹',
+      '0': '۰',
+      '.': '/'
     }
   }
 
-  function getarNumbers () {
-	  return {
-		  '1': '۱',
-		  '2': '۲',
-		  '3': '۳',
-		  '4': '٤',
-		  '5': '٥',
-		  '6': '٦',
-		  '7': '۷',
-		  '8': '۸',
-		  '9': '۹',
-		  '0': '۰',
-		  '.': '/'
-	  }
-  }
-
-  function getfaNumbers () {
-	  return {
-		  '1': '۱',
-		  '2': '۲',
-		  '3': '۳',
-		  '4': '۴',
-		  '5': '۵',
-		  '6': '۶',
-		  '7': '۷',
-		  '8': '۸',
-		  '9': '۹',
-		  '0': '۰',
-		  '.': '/'
-	  }
-  }
-
-  return self
+  return num[lang] 
 }
-
-module.exports = Numbers

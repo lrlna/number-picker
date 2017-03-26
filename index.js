@@ -1,24 +1,17 @@
-var numbers = require('./numbers')()
+var numbers = require('./numbers')
+var assert = require('assert')
 
-const Numerals = () => {
-  var self = {}
+module.exports = function getNumber (input, lang) {
+  assert.ok(lang, 'number-picker: should provide language to work with')
+  assert.ok(input, 'number-picker: should provide input')
+  // leave number as is if NaN
+  if (isNaN(input)) return input
 
-  // given a number, convert to proper lang
-  // input, number
-  // currentLang, string in form of 'fa', 'ar', 'en'
-  self.convertNumbers = (input, currentLang) => {
-    // leave number as is if NaN
-    if (isNaN(input)) return input
+  input = input.toString()
+  var numInput = input.match(/[0-9+\.]/gm)
+  var language = numbers(lang)
 
-    input = input.toString()
-		var numbersInInput = input.match(/[0-9+\.]/gm)
-    var languageNumbers = numbers.getNumbers()[currentLang]
-    var convertedNumber = numbersInInput.map( (numerals) => languageNumbers[numerals] ).join('')
-
-    return convertedNumber
-  }
-
-  return self
+  return numInput.map(function (num) {
+    return language[num]
+  }).join('')
 }
-
-module.exports = Numerals
