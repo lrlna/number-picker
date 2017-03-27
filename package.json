@@ -14,5 +14,11 @@
     "numbers"
   ],
   "author": "Irina Shestak",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "is-finite": "^1.0.2"
+  }
 }
