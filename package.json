@@ -1,8 +1,9 @@
 {
   "name": "number-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert between hindu and arabic numeral systems",
   "main": "index.js",
+  "repository": "oguching/number-picker",
   "scripts": {
     "test": "standard"
   },
@@ -14,5 +15,8 @@
     "numbers"
   ],
   "author": "Irina Shestak",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
 }
