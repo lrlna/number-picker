@@ -1,5 +1,5 @@
 var test = require('tape')
-var numbers = require('./index.js')
+var numbers = require('../index.js')
 
 test('test equality of 45', function(t){
 	t.equal(numbers(45, 'en'), '45')

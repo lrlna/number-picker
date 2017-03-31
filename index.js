@@ -1,12 +1,11 @@
 var numbers = require('./numbers')
 var assert = require('assert')
-var isFinite = require('is-finite')
 
 module.exports = function getNumber (input, lang) {
   assert.ok(lang, 'number-picker: should provide language to work with')
   assert.ok(input, 'number-picker: should provide input')
   // leave number as is if NaN
-  if (!isFinite(input)) return Math.abs(input)
+  if (isNaN(input) || !Number.isFinite(input)) return Math.abs(input)
 
   input = input.toString()
   var numInput = input.match(/[0-9+.]/gm)
