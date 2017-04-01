@@ -5,7 +5,7 @@ module.exports = function getNumber (input, lang) {
   assert.ok(lang, 'number-picker: should provide language to work with')
   assert.ok(input, 'number-picker: should provide input')
   // leave number as is if NaN
-  if (isNaN(input)) return input
+  if (isNaN(input) || !Number.isFinite(input)) return input
 
   input = input.toString()
   var numInput = input.match(/[0-9+.]/gm)
