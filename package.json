@@ -2,6 +2,7 @@
   "name": "number-picker",
   "version": "1.0.0",
   "description": "convert between hindu and arabic numeral systems",
+  "repository": "lrlna/number-picker",
   "main": "index.js",
   "scripts": {
     "test": "standard"
